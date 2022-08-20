@@ -1,0 +1,15 @@
+<!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
+{% extends 'flatpages/default.html' %}
+
+<!-- Название у нас будет Product -->
+{% block title %}
+Product
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим сам товар, идентификатор которого был передан в url -->
+{% block content %}
+<p>&nbsp;</p>
+<h3 align="left">{{ product }}</h3>
+<hr>
+<p style="font-size: 1.2em; text-align: justify;">&nbsp;{{ product.description }}</p>
+{% endblock content %}
